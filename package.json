@@ -10,7 +10,7 @@
         "bundle": "webpack-cli --config webpack.config.js",
         "watch-bundle": "webpack-cli --config webpack-watch.config.js",
         "watch-service": "nodemon output/service.js",
-        "release": "initialize-thingy release-script",
+        "release": "run-s -ns initialize-thingy release-script",
         "test": "run-s -ns build watch",
         "build": "run-s -ns build-coffee bundle",
         "watch": "run-p -nsr watch-coffee watch-bundle watch-service",
